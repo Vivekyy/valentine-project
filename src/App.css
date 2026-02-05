@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Main Valentine Page Styles */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffeef8 0%, #ffe4f3 50%, #ffd4ea 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  padding: 20px;
+}
+
+.heart-container {
+  margin-bottom: 30px;
+}
+
+.heart {
+  font-size: 80px;
+  animation: pulse 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+.heading {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(32px, 8vw, 48px);
+  color: #d63384;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(214, 51, 132, 0.2);
+}
+
+.subheading {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(16px, 4vw, 20px);
+  color: #d63384;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  font-weight: 600;
+
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 60px;
+}
+
+.yes-button {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, font-size 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+  z-index: 2;
+}
+
+.yes-button:hover {
+  box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+  transform: translateY(-2px);
+}
+
+.no-button {
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ffc1cc;
+  color: #666;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: left 0.15s ease, top 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.floating-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  animation: float linear infinite;
+  opacity: 0.6;
+}
+
+/* Thanks Page Styles */
+.thanks-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffeef8 0%, #ffe4f3 50%, #ffd4ea 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.thanks-content {
+  text-align: center;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 60px 40px;
+  border-radius: 30px;
+  max-width: 600px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.big-heart {
+  font-size: 100px;
+  margin-bottom: 20px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.thanks-image {
+  width: min(60vw, 240px);
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.thanks-heading {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(40px, 10vw, 56px);
+  color: #d63384;
+  margin-bottom: 4px; /* 👈 tighten */
+}
+
+.thanks-text {
+  font-size: clamp(16px, 4vw, 20px);
+  color: #d63384;
+  line-height: 1.4; /* slightly tighter */
+  margin-top: 0;    /* 👈 removes default gap */
+}
+
+.celebration-hearts {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 30px;
+  flex-wrap: wrap;
+}
+
+.celebration-heart {
+  display: inline-block;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: confettiFall linear infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .heart {
+    font-size: 60px;
+  }
+  
+  .thanks-content {
+    padding: 40px 20px;
+  }
+  
+  .big-heart {
+    font-size: 80px;
+  }
+  
+  .celebration-hearts {
+    font-size: 25px;
+    gap: 10px;
+  }
+}

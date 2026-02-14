@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.4b152f18.css",
+    "main.js": "./static/js/main.b1c1f230.js",
+    "static/media/reindeer.jpg": "./static/media/reindeer.5c7fca2dac2ff3bfc93a.jpg",
+    "index.html": "./index.html",
+    "main.4b152f18.css.map": "./static/css/main.4b152f18.css.map",
+    "main.b1c1f230.js.map": "./static/js/main.b1c1f230.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b152f18.css",
+    "static/js/main.b1c1f230.js"
+  ]
+}
